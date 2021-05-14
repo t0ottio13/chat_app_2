@@ -34,6 +34,26 @@ main {
     height: 600px;
     width: 600px;
 }
+.chat_screen {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.chat_screen ul{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items:flex-start;
+    justify-content: left;
+    flex-direction: column-reverse;
+}
 
 .text_wrapper{
     height: 60px;

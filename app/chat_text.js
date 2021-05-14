@@ -41,10 +41,9 @@ db.orderBy('time', 'desc').onSnapshot((querySnapshot) => {
             <li id=${data.id}>
                 <p>${data.data.name}</p>
                 <p>${data.data.text}</p>
-            <p class="chat_date">${moment.unix(data.data.time.seconds).fromNow()}</p>
+            <p class="chat_date">${convertFromFirestoreTimestampToDatetime(data.data.time.seconds)}</p>
         </li>
         `)
-        console.log(data.data.time.seconds);
     })
     $('#output').html(tagArray);
 })
