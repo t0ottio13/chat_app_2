@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <!-- <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet"> -->
+
+    <title>Chat Story</title>
+</head>
+<body>
+    <header>
+    <h1>Chat Story</h1>
+    </header>
+    <main>
+    <div class="main_wrapper">
+        <div class="chat_screen">
+            <!-- ここにチャットを表示 -->
+            <ul id="output"></ul>
+        </div>
+    </div>
+    <div class="text_wrapper">
+        <div class="from">
+        <input type="text" name="name" class="name_from" id="name">
+        <input type="text" name="text" class="text_from" id=text>
+        <input type="button" class="submit_btn" id="send" value="送信">
+    </div>
+    </main>
+    <footer></footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAnH3nrSwzCg9bEuZH6h5IEJcvLowZl7o4",
+    authDomain: "chat-app06.firebaseapp.com",
+    projectId: "chat-app06",
+    storageBucket: "chat-app06.appspot.com",
+    messagingSenderId: "311771394860",
+    appId: "1:311771394860:web:dabf0e573a61f028b5b289"
+    };
+  // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./chat_text.js"></script>
+<script src="../node_modules/moment/src/moment.js"></script>
+</body>
+</html>

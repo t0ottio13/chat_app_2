@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* background-color: honeydew; */
+    font-family: 'RocknRoll One', sans-serif;
+    list-style: none;
+}
+
+body {
+    margin: 0 auto;
+    width: 900px;
+
+}
+
+header{
+    height: 100px;
+    margin-top: 50px;
+}
+
+header h1{
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_wrapper {
+    background-color: wheat;
+    height: 600px;
+    width: 600px;
+}
+
+.text_wrapper{
+    height: 60px;
+    width: 600px;
+    margin-top: 10px;
+
+}
+
+.text_from input{
+    height: 60px;
+    margin: 0;
+}
+
+.text_from {
+    width: 75%;
+    border: none;
+    background-color: whitesmoke;
+    padding: 0.5% 2%;
+}
+
+.name_from {
+    width: 15%;
+    border: none;
+    background-color: whitesmoke;
+    padding: 0.5% 2%;
+}
+
+.submit_btn {
+    width: 8%;
+    padding: 4px 2%;
+    height: 100%;
+    border-radius: 5%;
+    border: none;
+    color: ivory;
+    background-color: cornflowerblue;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_wrapper {
+    background-color: none;
+}
+
+
+.chat_date {
+    font-size: 4px;
+}
+
+
