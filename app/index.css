@@ -45,15 +45,34 @@ main {
     left: 0;
 }
 
+#owl {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+    z-index: 2;
+    width: 60px;
+    height: 50px;
+}
+
+#actor_screen {
+    position: relative;
+    top: 90%;
+    left:0;
+    height: 10%;
+    width: 100%;
+}
+
 .chat_screen ul{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 100px;
+    left: 10px;
     display: flex;
     align-items:flex-start;
     justify-content: left;
     flex-direction: column-reverse;
 }
+
+
 
 .text_wrapper{
     height: 60px;
