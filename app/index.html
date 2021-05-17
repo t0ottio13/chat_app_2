@@ -9,25 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <!-- <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet"> -->
 
-    <title>Chat Story</title>
+    <title>Bird Chat</title>
 </head>
 <body>
     <header>
-    <h1>Chat Story</h1>
+    <h1>Bird Chat</h1>
     </header>
     <main>
     <div class="main_wrapper">
         <div class="chat_screen">
-            <!-- ここにチャットを表示 -->
-            <ul id="output"></ul>
             <div id="actor_screen"></div>
+        </div>
+        <div class="chat_text"><!-- ここにチャットを表示 -->
+            <ul id="output"></ul>
         </div>
     </div>
     <div class="text_wrapper">
         <div class="from">
-        <input type="text" name="name" class="name_from" id="name">
-        <input type="text" name="text" class="text_from" id=text>
-        <input type="button" class="submit_btn" id="send" value="送信">
+            <select size="1" id="name" type="text">
+                <option value="トリをえらぶ">トリをえらぶ</option>
+                <option value="フクロウ">フクロウ</option>
+                <option value="オウム">オウム</option>
+                <option value="クジャク">クジャク</option>
+                <option value="ターキー">ターキー</option>
+                <option value="フラミンゴ">フラミンゴ</option>
+                <option value="ドードー">ドードー</option>
+            </select>
+            <!-- <input type="text" name="name" class="name_from" id="name"> -->
+            <input type="text" name="text" class="text_from" id=text>
+            <input type="button" class="submit_btn" id="send" value="送信">
+        </div>
+        <input type="button" class="logout_btn" id="logout" value="ログアウト">
     </div>
     </main>
     <footer></footer>
@@ -53,6 +65,6 @@
     firebase.initializeApp(firebaseConfig);
 </script>
 <script src="./chat_text.js"></script>
-<script src="./actor.js"></script>
+<!-- <script src="./local_actor.js"></script> -->
 </body>
 </html>

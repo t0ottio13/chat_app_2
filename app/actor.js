@@ -1,6 +1,6 @@
 const db_actor = firebase.firestore().collection('actor_06');
 
-$('#actor_screen').html( '<img id="owl" src="./フクロウ.png">' );
+$('#actor_screen').html( '<img id="owl" src="./image/フクロウ.png">' );
 
 //キャラクターの位置
 let y = 0;
@@ -12,7 +12,7 @@ let x = 0;
 addEventListener("keydown", keyDownFunc);
 //キーが押されたときに呼び出される関数
 function keyDownFunc(event) {
-    //押されたボタンに割り当てられた数値（すうち）を、key_codeに代入
+    //押されたボタンに割り当てられた数値を、key_codeに代入
     let key_code = event.keyCode;
     //「左ボタン」が押されたとき、xの値から32を引き算する
     if (key_code === 37) {
@@ -48,7 +48,7 @@ function keyDownFunc(event) {
     if (x < 0) {
         x += 32;
     }
-    //フクロウの画像の位置（いち）を反映（はんえい）させる
+    //フクロウの画像の位置をデータに反映させる
     db_actor.add({
         name: 'owl',
         x: x,
@@ -65,10 +65,22 @@ db_actor.orderBy('time','asc').onSnapshot((querySnapshot) => {
         }
         dataArray.push(data);
     })
+    console.log(dataArray.length);
     console.log(dataArray);
-    const fix_x = x + 'px';
-    $('#owl').css('left', fix_x);
+    console.log(dataArray[dataArray.length-1].data);
+    const fix_x = dataArray[dataArray.length-1].data.x + 'px';
+    // const fix_y = dataArray[dataArray.length-1].data.y + 'px';
+    const tag =`
+        <div id="owl >
+            <p id="actor_text"></p>
+            <img id="owl_img" src="./フクロウ.png"
+                style="left:${fix_x}">
+        </div>
+    `;
+    // $('#owl').css('left', fix_x);
+    // $('#owl').css('top', fix_y);
+    $('#actor_screen').html(tag);
 })
 
-	document.getElementById( 'owl' ).style.top = y + "px";
-    document.getElementById('owl').style.left = x + "px";
+	// document.getElementById( 'owl' ).style.top = y + "px";
+    // document.getElementById('owl').style.left = x + "px";

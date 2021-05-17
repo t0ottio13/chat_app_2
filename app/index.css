@@ -30,41 +30,78 @@ main {
 }
 
 .main_wrapper {
-    background-color: wheat;
     height: 600px;
-    width: 600px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .chat_screen {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    background-color: wheat;
     height: 100%;
-    width: 100%;
+    width: 80%;
     position: relative;
     bottom: 0;
     left: 0;
 }
 
-#owl {
-	position: absolute;
-	bottom: 10px;
-	left: 0;
-    z-index: 2;
+.chat_text {
+    background-color:rgb(0, 0,0 ,0.5);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 20%;
+    height: 600px;
+    position: relative;
+    color: lightgreen;
+}
+
+.chat_text_name {
+    color:aquamarine;
+}
+
+.chat_date {
+    color: mediumslateblue;
+}
+
+/* #owl {
+	/* position: absolute; */
+	/* bottom: 10px;
+	left: 0; */
+    /* z-index: 2;
+} */ 
+
+.actor_box img{
     width: 60px;
     height: 50px;
 }
 
-#actor_screen {
-    position: relative;
-    top: 90%;
-    left:0;
-    height: 10%;
-    width: 100%;
+.actor_box p{
+    padding-left: 5px;
 }
 
-.chat_screen ul{
+.actor_box {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#actor_screen {
+    position: relative;
+    top: 85%;
+    left:0;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chat_text ul{
     position: absolute;
-    bottom: 100px;
+    bottom: 10px;
     left: 10px;
     display: flex;
     align-items:flex-start;
@@ -76,7 +113,7 @@ main {
 
 .text_wrapper{
     height: 60px;
-    width: 600px;
+    width: 800px;
     margin-top: 10px;
 
 }
@@ -109,6 +146,16 @@ main {
     color: ivory;
     background-color: cornflowerblue;
 }
+
+.logout_btn {
+    width:100px;
+    padding: 4px 2%;
+    border-radius: 5%;
+    border: none;
+    color: ivory;
+    background-color: tomato;
+}
+
 
 .form {
     width: 100%;
